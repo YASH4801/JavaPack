@@ -14,4 +14,8 @@ public class AnimalLength {
     public void testCommit(){
         System.out.println("pushing test commit to master directly....");
     }
+
+    public void testCommitForPR(){
+        System.out.println("pushing test commit through Pull Request...");
+    }
 }
