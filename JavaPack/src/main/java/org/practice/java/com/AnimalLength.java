@@ -10,4 +10,8 @@ public class AnimalLength {
         animalsList = animalsList.stream().filter(animal -> animal.length() >= 2).toList();
         return Integer.parseInt(animalsList.get(animalsList.size()-1));
     }
+
+    public void testCommit(){
+        System.out.println("pushing test commit to master directly....");
+    }
 }
