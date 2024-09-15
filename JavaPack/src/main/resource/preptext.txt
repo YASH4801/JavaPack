@@ -1,0 +1,20 @@
+Date and Time:
+
+Working with the java.time package.
+	Understanding classes like LocalDate, LocalTime, LocalDateTime, ZonedDateTime, and Period.
+	Formatting and parsing dates and times using DateTimeFormatter.
+	
+Text:
+	Manipulating strings using the String and StringBuilder classes.
+
+Using text blocks introduced in Java 13.
+	Understanding methods for string comparison, searching, and modification.
+	
+Numeric Values:
+	Using primitive data types and their wrapper classes (Integer, Double, etc.).
+	Performing arithmetic operations and understanding type promotion and casting.
+	Utilizing the Math API for mathematical operations.
+	
+Boolean Values:
+	Working with bo	olean expressions and logical operators.
+	Understanding the use of parentheses to control the order of operations in boolean expressions.
