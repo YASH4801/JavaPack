@@ -1,12 +1,12 @@
 package org.practice.java.com.ConfigReader;
 
+import org.practice.java.com.ConfigReader.models.PathConstants;
+
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.practice.java.com.ConfigReader.models.PathConstants;
 
 public class TestCaseReader {
     
@@ -31,12 +31,17 @@ public class TestCaseReader {
         var testCasePath = pathBuilder(PathConstants.LEETCODE_TC_PATH, PathConstants.TESTCASE, caseId, PathConstants.TEXT_EXT);
         var testData = readTestCases(testCasePath);
         int count = 0;
+        int iterator = 0;
 
         var caseList = new ArrayList<List<String>>();
-        while(count < testData.size()){
+        while (iterator < testData.size()) {
             if((count + 1) == linesPerCase){
-                caseList.add(testData.subList(count - linesPerCase + 1, count + 1));
+                caseList.add(testData.subList(iterator - linesPerCase + 1, iterator + 1));
+                count = 0;
+            } else {
+                count++;
             }
+            iterator++;
         }
         
         return caseList;

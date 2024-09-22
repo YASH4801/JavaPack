@@ -10,7 +10,6 @@ public class LC525ContinousSubarray {
         int maxLength = 0;
 
         int prefixSum = 0;
-        ;
 
         Map<Integer, Integer> memoryMap = new HashMap<>();
 

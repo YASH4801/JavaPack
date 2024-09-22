@@ -1,5 +1,7 @@
 package org.practice.java.com.ConfigReader.models;
 
+import lombok.Getter;
+
 
 public enum PathConstants{
     LEETCODE_TC_PATH("src\\main\\resource\\TestCases\\LeetCode"),
@@ -10,10 +12,7 @@ public enum PathConstants{
         this.value = path;
     }
 
+    @Getter
     private String value;
-
-    public String getValue() {
-        return value;
-    }
 
 }
