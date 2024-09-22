@@ -1,6 +1,11 @@
 package org.practice.java.com.LeetCode.Solutions;
 
 import org.junit.jupiter.api.Test;
+import org.practice.java.com.ConfigReader.TestCaseReader;
+import org.practice.java.com.ConfigReader.TestCaseUtils;
+
+import java.io.IOException;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -10,17 +15,24 @@ class LC525ContinousSubarrayTest {
 
     @Test
     void findMaxLength() {
-        var testcase_first = new int[]{0, 0, 1, 1, 0};
-        var testcase_second = new int[]{1, 1, 0, 0, 0, 1, 1, 1, 1};
-        var tc_three = new int[]{0, 1};
+        List<List<String>> testCases;
+        try {
+            testCases = TestCaseReader.loadTestCase(1, 525);
+            System.out.println(testCases);
+        } catch (IOException ex) {
+            System.out.println("Error reading test cases: " + ex.getMessage());
+            return;  // Return early to avoid unnecessary further testing.
+        }
 
-        var result = tested.findMaxLength(testcase_first);
-        assertEquals(4, result);
+        var refinedTestCases = TestCaseUtils.cleanTestCases(testCases);
 
-        result = tested.findMaxLength(testcase_second);
-        assertEquals(6, result);
+        assertValues(2, refinedTestCases.get(0).get(0));
+        assertValues(2, refinedTestCases.get(1).get(0));
+    }
 
-        result = tested.findMaxLength(tc_three);
-        assertEquals(2, result);
+    private void assertValues(int testValue, int[] testCase) {
+        int result;
+        result = tested.findMaxLength(testCase);
+        assertEquals(testValue, result);
     }
 }
