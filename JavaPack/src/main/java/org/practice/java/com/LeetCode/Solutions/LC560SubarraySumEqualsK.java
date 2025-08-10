@@ -1,7 +1,6 @@
 package org.practice.java.com.LeetCode.Solutions;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class LC560SubarraySumEqualsK {
@@ -22,4 +21,32 @@ public class LC560SubarraySumEqualsK {
 
         return count;
     }
+    public static void main(String[] args) {
+        Solutions tasks = new Solutions();
+//        System.out.println(tasks.check(new int[]{3, 4, 5, 1, 2})); // Output: true
+    }
+}
+
+class Solutions {
+    public boolean check(int[] nums) {
+        var checker = new ArrayList<Integer>();
+        addAll(checker, nums);
+        Arrays.sort(nums);
+        var res = new ArrayList<Integer>();
+        addAll(res, nums);
+        for (int i = 0; i < checker.size(); i++) {
+            var retainer  = checker.removeFirst();
+            checker.add(retainer);
+            if (checker.equals(res)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    private void addAll(ArrayList<Integer> list, int[] nums) {
+        for (int num : nums) {
+            list.add(num);
+        }
+    }
+
 }

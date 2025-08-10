@@ -1,6 +1,7 @@
 package org.practice.java.com;
 
 import org.practice.java.com.LeetCode.Solutions.InterviewSeries.Arrays.MirrorArray;
+import org.practice.java.com.LeetCode.Solutions.LC27RemoveElement;
 
 import java.util.List;
 import java.util.Stack;
@@ -17,6 +18,7 @@ public class App
 //        MirrorArray solution = new MirrorArray();
 //        solution.rotate(testArray);
         System.out.println(removeDigit("123", '3'));
+        LC27RemoveElement.fun();
 
     }
 

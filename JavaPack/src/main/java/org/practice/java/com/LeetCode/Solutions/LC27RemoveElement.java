@@ -37,4 +37,10 @@ public class LC27RemoveElement {
         nums[i] = nums[k];
         nums[k] = temp;
     }
+
+    public static void fun() {
+        for(int i = 0; i < 10; System.out.println("xyz")){
+            System.out.println("abc");
+        }
+    }
 }
